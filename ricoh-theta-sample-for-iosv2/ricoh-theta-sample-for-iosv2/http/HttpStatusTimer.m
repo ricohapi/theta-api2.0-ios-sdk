@@ -49,15 +49,13 @@
     _semaphore = dispatch_semaphore_create(0);
     
     // Create and start timer
-    NSTimer *timer = [NSTimer timerWithTimeInterval:0.5f
-                                             target:self
-                                           selector:@selector(getState:)
-                                           userInfo:nil
-                                            repeats:YES];
-    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
-    [runLoop addTimer:timer forMode:NSRunLoopCommonModes];
-    [runLoop run];
-    
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 500 * NSEC_PER_MSEC, 100 * NSEC_PER_MSEC);
+    dispatch_source_set_event_handler(timer, ^{
+        [self getState:timer];
+    });
+    dispatch_resume(timer);
+
     // Wait until signal is called
     dispatch_semaphore_wait(_semaphore, DISPATCH_TIME_FOREVER);
     return _state;
@@ -67,7 +65,7 @@
  * Delegate called during each set period of time
  * @param timer Timer
  */
-- (void)getState:(NSTimer*)timer
+- (void)getState:(dispatch_source_t)timer
 {
     // Create JSON data
     NSDictionary *body = @{@"id": _commandId};
@@ -92,7 +90,7 @@
                        dispatch_semaphore_signal(_semaphore);
                        
                        // Stop timer
-                       [timer invalidate];
+                       dispatch_source_cancel(timer);
                    }
                }];
     [task resume];

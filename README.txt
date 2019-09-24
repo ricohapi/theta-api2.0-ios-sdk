@@ -1,7 +1,7 @@
 ==================================================
  README for "RICOH THETA v2 SDK for iOS"
 
- Version :0.1.1
+ Version :0.1.2
 ==================================================
 
 This file is an explanation document for RICOH THETA v2 SDK for iOS.
@@ -45,12 +45,13 @@ However, this document assumes that you have already registered as an iOS develo
 * Required environment for development
 
     [About RICOH THETA S]
-      Dedicated sample applications for the RICOH THETA S that meet the following conditions.
+      Dedicated sample applications for the RICOH THETA S or above that meet the following conditions.
 
       * Hardware
-          RICOH THETA S
+          RICOH THETA S or above
       * Firmware
-          Version 1.11 or higher
+          * RICOH THETA S: Version 1.11 or above
+          * RICOH THETA SC: All versions
           (Method for checking and updating the firmware:  https://theta360.com/en/support/manual/s/content/pc/pc_09.html)
 
 
@@ -58,10 +59,10 @@ However, this document assumes that you have already registered as an iOS develo
       Operation of the sample application has been verified under the following conditions.
 
       * Verified operating environment
-          iPhone 5s
+          iPhone 6s
       * Development/Build Environment
-          Xcode 7.0.1
-          SDK9
+          Xcode 8.1
+          SDK10.1
 
 ----------------------------------------
 
@@ -69,7 +70,7 @@ However, this document assumes that you have already registered as an iOS develo
 
     [Operating the Sample Application]
         1. Open and execute ricoh-theta-sample-for-iosv2 from Xcode. The sample application is registered in the iOS device.
-        2. Connect the RICOH THETA S to the iOS device using Wi-Fi.
+        2. Connect the RICOH THETA S or above to the iOS device using Wi-Fi.
             (Usage instructions, connecting the camera to a smartphone: https://theta360.com/en/support/manual/s/content/prepare/prepare_06.html)
         3. The sample application can be operated
 
@@ -113,3 +114,4 @@ However, this document assumes that you have already registered as an iOS develo
 
     12/22/2015 0.1.0 Initial release
     01/28/2016 0.1.1 Bug fix
+    11/17/2016 0.1.2 Bug fix

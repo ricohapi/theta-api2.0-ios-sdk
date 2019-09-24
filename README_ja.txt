@@ -1,7 +1,7 @@
 ==================================================
  README for "RICOH THETA v2 SDK for iOS"
 
- Version :0.1.1
+ Version :0.1.2
 ==================================================
 
 このファイルはRICOH THETA v2 SDK for iOSに関する説明文書です。
@@ -45,12 +45,13 @@
 * 開発に必要な環境に関して
 
     [ RICOH THETA Sについて ]
-      以下の条件を満たすRICOH THETA S専用のサンプルアプリケーションです。
+      以下の条件を満たすRICOH THETA S以降の機種専用のサンプルアプリケーションです。
 
       * ハードウェア
-          RICOH THETA S
+          RICOH THETA S以降の機種
       * ファームウェア
-          バージョン 1.11 以上
+          * RICOH THETA S: バージョン 1.11 以上
+          * RICOH THETA SC: すべてのバージョン
           (ファームウェアの確認およびアップデート方法はこちらです： https://theta360.com/ja/support/manual/s/content/pc/pc_09.html )
 
 
@@ -58,10 +59,10 @@
       サンプルアプリケーションは以下の条件で動作確認済みです。
 
       * 動作確認環境
-          iPhone 5s
+          iPhone 6s
       * 開発・ビルド環境
-          Xcode 7.0.1
-          SDK9
+          Xcode 8.1
+          SDK10.1
 
 ----------------------------------------
 
@@ -69,7 +70,7 @@
 
     [ サンプルアプリケーションを動かす場合 ]
         1. ricoh-theta-sample-for-iosv2をXcodeから開いて実行してください。iOS端末にサンプルアプリケーションが登録されます。
-        2. RICOH THETA SをiOS端末とWi-Fiで接続してください
+        2. RICOH THETA S以降の機種をiOS端末とWi-Fiで接続してください
             (使用説明書、カメラとスマートフォンを接続する：https://theta360.com/ja/support/manual/s/content/prepare/prepare_06.html)
         3. サンプルアプリケーションを操作する事ができます
 
@@ -113,3 +114,4 @@
 
     2015/12/22 0.1.0 初回リリース
     2016/01/28 0.1.1 バグ修正
+    2016/11/17 0.1.2 バグ修正
