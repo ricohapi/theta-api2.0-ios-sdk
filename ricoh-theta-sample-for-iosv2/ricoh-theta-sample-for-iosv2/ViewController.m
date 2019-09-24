@@ -25,6 +25,8 @@ inline static void dispatch_async_default(dispatch_block_t block)
     NSNumber* _batteryLevel;
     HttpConnection* _httpConnection;
 }
+@property(nonatomic,weak)IBOutlet UIView *toastView;
+
 @end
 
 @implementation ViewController
@@ -142,6 +144,20 @@ inline static void dispatch_async_default(dispatch_block_t block)
             });
         }
     }
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ([identifier isEqualToString:@"SegueViewControllerToImageViewControllerID"]) {
+        TableCell* c = (TableCell*)sender;
+        TableCellObject* o = [_objects objectAtIndex:c.objectIndex];
+        
+        if (CODE_JPEG != o.objectInfo.file_format) {
+            [self showToast];
+            return NO;
+        }
+    }
+    return YES;
 }
 
 #pragma mark - HTTP Operations.
@@ -371,6 +387,18 @@ inline static void dispatch_async_default(dispatch_block_t block)
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)showToast
+{
+    self.toastView.hidden = NO;
+    self.toastView.alpha = 1.0f;
+    [UIView animateWithDuration:0.7f delay:3.0f options:(UIViewAnimationOptionAllowUserInteraction) animations:^{
+        self.toastView.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        self.toastView.hidden = YES;
+        self.toastView.alpha = 1.0f;
+    }];
 }
 
 @end

@@ -1,7 +1,7 @@
 ==================================================
  README for "RICOH THETA v2 SDK for iOS"
 
- Version :0.1.0
+ Version :0.1.1
 ==================================================
 
 This file is an explanation document for RICOH THETA v2 SDK for iOS.
@@ -112,3 +112,4 @@ However, this document assumes that you have already registered as an iOS develo
 * Update History
 
     12/22/2015 0.1.0 Initial release
+    01/28/2016 0.1.1 Bug fix
