@@ -1,0 +1,27 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "78d5feb8-1d8f-3b4f-8ea2-8de6a477b74d",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "78d5feb8-1d8f-3b4f-8ea2-8de6a477b74d" : {
+      "DVTSourceControlWorkingCopyRepositoryBranchesLocationKey" : "branches",
+      "DVTSourceControlWorkingCopyRepositoryTagsLocationKey" : "tags",
+      "DVTSourceControlWorkingCopyRepositoryPrimaryBranchLocationKey" : "trunk"
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "78d5feb8-1d8f-3b4f-8ea2-8de6a477b74d" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1B4F3FCD-C5DA-4399-98C5-ACE041A3A56D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "78d5feb8-1d8f-3b4f-8ea2-8de6a477b74d" : "theta\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ricoh-theta-sample-for-iosv2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "trunk\/SDK2\/apps\/v2\/RICOH_THETA_SDK_v2_for_iOS\/ricoh-theta-sample-for-iosv2\/ricoh-theta-sample-for-iosv2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/10.45.236.157\/svn\/theta",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "78d5feb8-1d8f-3b4f-8ea2-8de6a477b74d"
+    }
+  ]
+}
